@@ -1,0 +1,45 @@
+$heading-color:cadetblue;
+
+
+.text{
+    margin-top: 60px;
+    p.description{
+        text-align: center;
+        padding: 34px;
+        font-size: 24px;
+        color: darkgrey;
+        font-weight: 500;
+    }
+    h1{
+        color: $heading-color;
+    }
+}
+.row{
+    p.pragraphe{
+    font-size: 2rem;
+    text-align: center;
+    color: burlywood;
+    }
+    ul{
+    list-style: arabic-indic;
+    font-size: 23px;
+    margin: 11px 10px;
+    font-weight: 100;
+    color: chocolate;
+
+    li{
+        margin-bottom: 10px;
+    }
+    }
+}
+.gallary{
+    margin-bottom: 40px;
+    margin-left: 10px;
+    img{
+        height: 215px;
+       
+    }
+    
+    
+
+}
