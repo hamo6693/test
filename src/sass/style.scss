@@ -9,12 +9,14 @@ body{
 .navbar{
     justify-content: center;
     background-color: aliceblue;
+
+    
     a{
         text-decoration: none;
-        font-size: 2rem;
-        background-color: #f4fbfa;
+        font-size: 28px;
         padding: 10px;
         color: #d5d5c7;
+
 
         img{
             padding-top: 18px;
@@ -26,6 +28,7 @@ body{
 .intro{
     margin-top:60px;
     color: cadetblue;
+    text-align: center;
 
     h1{
         margin-bottom: 20px;
@@ -57,35 +60,35 @@ body{
         height: 100%;
     }
     .price{
-            position: absolute;
-            color: aliceblue;
-            font-size: xx-large;
-            background-color: black;
-            padding: 0px 5px;
-            box-shadow: 0px 15px 36px 0px black;
-            border-radius: 45%;
-            transform: scale(1.5);
+            
+            color: #34b39b;
+            font-size: 33px;
+            
         }
     
     h1{
         text-align: center;
         margin-bottom: 100px;
-        color: burlywood;
+        color: cadetblue;
+        padding-top: 60px;
+    }
+    p.text-round{
+        color:#86c7b5;
+        font-size: 22px;
+        font-weight: bold;
     }
     .custom{
         margin: 0 auto;
         text-align: center;
     }
     .btn{
-    justify-content: center;
-    margin: 13px 111px;
-    width: 138px;
-    padding: 4px;
+    
     border: none;
     background-color: darkcyan;
     color: aliceblue;
     border-radius: 5%;
     cursor: pointer;
+    margin-top: 15px;
 
     
 
@@ -95,13 +98,6 @@ body{
     
 }
  }
-
- .contact-us{
-    h1{
-        text-align: center;
-    }
- }
-
 
  form{
     padding: 100px;
@@ -117,4 +113,34 @@ body{
         color: beige;
     }
 }
+
+footer{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 20px;
+}
  
+@media (max-width:992px) {
+    .navbar{
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+        .col-custom{
+            margin-bottom: 230px !important;
+        }
+    
+            img.custom{
+                height: 58%;
+            
+        }
+
+    
+}
+@media (max-width: 576px) {
+    .media{
+        text-align: center;
+    }
+}

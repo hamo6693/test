@@ -1,5 +1,34 @@
-$color:red;
+$color-header:#5f9ea0;
+$color-p:#b1a5a5;
 
-.hi{
-    color: $color;
+$color-body:#fbfbfb;
+
+
+
+@mixin body {
+    background-color: $color-body !important;
 }
+
+.cai{
+    @include body;
+}
+
+
+@mixin p {
+    color: $color-p !important;    
+}
+@mixin header{
+    color: $color-header !important;
+}
+
+
+
+.text{
+    .custom--description{
+    @include p;
+    }
+    .text-header{
+        @include header;
+    }
+}
+

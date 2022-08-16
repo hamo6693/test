@@ -8,25 +8,47 @@
     <script type="text/html" src="{require('index.js')}"></script>
 </head>
 <body dir="rtl">
-    <div class="container-fluid">
+    
      
-        <div class="row">
-            <div class="navbar">
-                <a href="#">سفرني
-                    <img src="./img/noun-plane-1445492.svg" height="100px" width="100px" alt="">
-                </a>
+    <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./img/noun-plane-1445492.svg" width="100px" height="100px" alt="">
+                سفرني
+            </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item active">
+                    <a class="nav-link" aria-current="page" href="#scroll-1">عن الشركة</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scroll-2">خدماتنا</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scroll-3">جولات سياحية</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scroll-4">تواصل معنا </a>
+                  </li>
+                  
+                    
+               
+              </div>
             </div>
-        </div>
+    </nav>
 
     <div class="container">
-        <div class="intro">
+        <div class="intro" id="scroll-1">
             <h1>الشركة السياحية</h1>
             <p>
                 لشركة السياحية الأفضل في الوطن العربي، هدفنا مساعدتك وتيسير أمورك، لا تتردد بالتواصل معنا فنحن هنا لنساعدك على إيجاد كل ما تحتاج له. إن كنت تبحث عن سكن أو جولة سياحية لتقضي أفضل الأوقات فقد وجدت طلبك
             </p>
         </div>
 
-            <div class="service">
+            <div class="service" id="scroll-2">
                 <h1>خدماتنا</h1>
                 <p>
                     الخدمات التي تقدمها الشركة:
@@ -58,12 +80,13 @@
                 </div>
             </div>
 
-            <div class="row round">
+            <div class="round" id="scroll-3">
                 <h1 class="text-center">جولات سياحية</h1>
-                <div class="col-6">
-                    <p>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 text-center col-custom">
+                        <p class="text-round">
                         رحلة الاهرامات الى مصر
-                    </p>
+                        </p>
                     <div class="price">
                         <span>170$</span>                        
                     </div>
@@ -74,27 +97,29 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-6">
-                    <p>
+                <div class="col-md-6 col-sm-12 text-center">
+                    <p class="text-round">
                         رحلة الى مدينة اسطنبول في تركيا
                     </p>
-                    <div class="price" style="margin-right: 370px;">
+                    <div class="price price-custom">
                         <span>200$</span>                        
                     </div>
-                    <img src="./img/osman-koycu-c6qF_lYvu2I-unsplash.jpg" height="10%" width="81%" alt="">
+                    <img src="./img/osman-koycu-c6qF_lYvu2I-unsplash.jpg" class="custom" height="10%" width="81%" alt="">
                     <div>
                         <a href="istanbul.html">
                         <button type="submit" class="btn">رحلة اسطنبول</button>
                         </a>
                     </div>
                 </div>
+                </div>
+                
 
-                <div class="contact-us" style="margin-top:170px;">
+                <div class="contact-us" id="scroll-4" style="margin-top:170px;">
                     <h1 class="text-center">تواصل معنا</h1>
                     <div class="row">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.8250296029237!2d31.613591914694915!3d30.1564180818417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14581d68b796907f%3A0xcfe0a5c6aba15e31!2sMohamed%20Nagiub%20St%2C%20El%20Shorouk%2C%20Cairo%20Governorate%2C%20Egypt!5e0!3m2!1sen!2slt!4v1659532391763!5m2!1sen!2slt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="mt-3">
+                    <div class="media mt-3">
                         <h6>العنوان</h6>
                         <span>مصر،القاهرة،شارع محمد نجيب</span>
                         <h6 class="mt-2">البريد الالكتروني</h6>
@@ -103,13 +128,18 @@
                         <span class="pb-4">0096000123400</span>
                     </div>
                 </div>
+                
             </div>
         
 
         
        
     </div>
-</div>
+
+    <footer class="bg-light">
+        جميع الحقوق محفوظة&copy;
+        <span id="date"></span>
+    </footer>
     
 
 

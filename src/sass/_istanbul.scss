@@ -1,4 +1,37 @@
 $heading-color:cadetblue;
+$color-header:#36aaa2;
+$color-p:#FFF;
+
+
+
+
+$color-body:black;
+
+
+
+@mixin body {
+    background-color: $color-body !important;
+}
+
+.ast{
+    @include body;
+}
+
+@mixin p {
+    color: $color-p !important;    
+}
+@mixin header{
+    color: $color-header !important;
+}
+
+.text{
+    .custom-head{
+    @include p;
+    }
+    .custom-text{
+        @include header;
+    }
+}
 
 
 .text{
@@ -10,9 +43,7 @@ $heading-color:cadetblue;
         color: darkgrey;
         font-weight: 500;
     }
-    h1{
-        color: $heading-color;
-    }
+    
 }
 .row{
     p.pragraphe{
@@ -23,6 +54,7 @@ $heading-color:cadetblue;
     ul{
     list-style: arabic-indic;
     font-size: 23px;
+    text-align: center;
     margin: 11px 10px;
     font-weight: 100;
     color: chocolate;

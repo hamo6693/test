@@ -7,6 +7,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import '@fortawesome/fontawesome-free/js/all.min.js';
 
 
+var date = new Date();
+var year = date.getFullYear();
+document.getElementById("date").innerHTML = year;
 
 var $password = document.getElementById("password");
 var $mybtn = document.getElementById("mybtn");
@@ -20,3 +23,5 @@ $mybtn.onclick = function () {
     }
     this.textContent = "show password";
 }
+
+
