@@ -1,7 +1,7 @@
-$color-header:#5f9ea0;
-$color-p:#b1a5a5;
-
 $color-body:#fbfbfb;
+
+$color-head:#a89985;
+$base-color:#6a6b65;
 
 
 
@@ -13,12 +13,15 @@ $color-body:#fbfbfb;
     @include body;
 }
 
+h1{
+    color: $color-head;
+}
 
 @mixin p {
-    color: $color-p !important;    
+    color: $base-color!important;    
 }
 @mixin header{
-    color: $color-header !important;
+    color: $color-head !important;
 }
 
 
@@ -31,4 +34,30 @@ $color-body:#fbfbfb;
         @include header;
     }
 }
+@media (max-width:1400px) {
+    .gallary{
+        img{
+            width: 220px;
+        }
+    }
+}
+@media (max-width:1200px) {
+    .gallary{
+        display: flex;
+        flex-wrap: wrap;
+        img{
+            height: 100px;
+            width: 230px;
+        }
+    }
+    .row-pic{
+    
+    margin: 0 auto;
+    }
+}
 
+@media (max-width: 991px) {
+    .gallary{
+        text-align: center;
+    }
+}

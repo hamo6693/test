@@ -1,27 +1,13 @@
-$heading-color:cadetblue;
-$color-header:#36aaa2;
-$color-p:#FFF;
+$color-head:#a89985;
+$base-color:#6a6b65;
 
 
-
-
-$color-body:black;
-
-
-
-@mixin body {
-    background-color: $color-body !important;
-}
-
-.ast{
-    @include body;
-}
 
 @mixin p {
-    color: $color-p !important;    
+    color: $color-head !important;    
 }
 @mixin header{
-    color: $color-header !important;
+    color: $base-color !important;
 }
 
 .text{
@@ -49,7 +35,7 @@ $color-body:black;
     p.pragraphe{
     font-size: 2rem;
     text-align: center;
-    color: burlywood;
+    color: $base-color;
     }
     ul{
     list-style: arabic-indic;
@@ -57,7 +43,7 @@ $color-body:black;
     text-align: center;
     margin: 11px 10px;
     font-weight: 100;
-    color: chocolate;
+    color: $color-head;
 
     li{
         margin-bottom: 10px;
@@ -67,11 +53,21 @@ $color-body:black;
 .gallary{
     margin-bottom: 40px;
     margin-left: 10px;
+    text-align: center;
     img{
-        height: 215px;
-       
+        height: 215px;      
     }
     
-    
-
+}
+@media(max-width:1200px) {
+    .gallary{
+        justify-content: center;
+    }
+}
+@media(max-width:991px) {
+    .gallary{
+        img{
+            width: 178px;
+        }
+    }
 }

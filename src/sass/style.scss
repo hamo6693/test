@@ -2,21 +2,55 @@
 @import "./istanbul";
 
 $background-color:#BBB;
+$base-color:#6a6b65;
+$color-head:#a89985;
 
 body{
     background-color: white;
 }
+
+
+h1.header{
+    color: $color-head;
+}
+h1.header::after{
+    content: "";
+    display: block;
+    width: 100px;
+    border: 1px solid;
+    margin: 0 auto;
+    margin-top: 25px;
+}
 .navbar{
     justify-content: center;
-    background-color: aliceblue;
+    background-color: $base-color;
+
+    li{
+        margin-left: 5px;
+    }
+
+    li.active a.nav-link{
+            
+        color:#ffffff;
+        background-color: #cfc1ab;
+        padding: 5px 10px;    
+}
+
+
 
     
-    a{
+    a.nav-link{
         text-decoration: none;
         font-size: 28px;
-        padding: 10px;
+        padding: 0px;
         color: #d5d5c7;
 
+        
+        &:hover{
+            background-color: #cfc1ab;
+            color: #FFF;
+            padding: 5px;
+        }
 
         img{
             padding-top: 18px;
@@ -33,17 +67,35 @@ body{
     h1{
         margin-bottom: 20px;
     }
+
+    blockquote{
+    font-size: 2rem;
+    line-height: 2;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    color: $base-color;
+    }
 }
 .service{
-    margin-top: 60px;
-    color: cadetblue;
-    margin-bottom: 40px;
+    margin-top: 60px;    
     text-align: center;
-
+    color: #354449;
     p{
-    font-size: 28px;
-    margin-bottom: 35px;
-    color: darkgray;
+        color: #cfc1ab;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    p::after{
+    border: 2px dotted;
+    content: "";
+    display: block;
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    top: 118%;
     }
 
     h1{
@@ -51,29 +103,54 @@ body{
     margin-bottom: 50px;
     }
     .test{
-        margin-bottom: 40px;
-        font-size: large;
+        margin-bottom: 90px;
+        font-size: 27px;
+
+        img{
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        img.sec{
+            height: 80px;
+        }
     }
 }
 .round{
+    .overlay{
+        position: relative;
+    }
     img{
         height: 100%;
     }
+    img:hover{
+        background-color: #1597c3;
+    }
     .price{
             
-            color: #34b39b;
+            color: black;
             font-size: 33px;
+            span{
+                position: absolute;
+                left: 11%;
+                top: 170%;
+                background-color: white;
+                border-radius: 50%;
+                padding: 10px;
+                color: black;
+                font-weight: bold;
+                rotate: 350deg;
+            }
             
         }
     
     h1{
         text-align: center;
         margin-bottom: 100px;
-        color: cadetblue;
+        
         padding-top: 60px;
     }
     p.text-round{
-        color:#86c7b5;
+        color:$base-color;
         font-size: 22px;
         font-weight: bold;
     }
@@ -84,7 +161,7 @@ body{
     .btn{
     
     border: none;
-    background-color: darkcyan;
+    background-color: $base-color;
     color: aliceblue;
     border-radius: 5%;
     cursor: pointer;
@@ -97,6 +174,7 @@ body{
     }
     
 }
+
  }
 
  form{
@@ -104,36 +182,50 @@ body{
     
     border: 1px outset;
     margin-top: 60px !important;
-    box-shadow: 1px 0px 50px 90px beige;
+    box-shadow: 1px 0px 50px 90px $base-color;
     border-radius: 2%;
     h1{
         text-align: center;
         bottom: 19px;
         position: relative;
-        color: beige;
+        color: $color-head;
     }
 }
 
 footer{
-    background-color: aliceblue;
+    background-color: $base-color;
     text-align: center;
     padding: 20px;
+    color: #FFF;
 }
- 
+
+
+ @media (max-width:1200px){
+    .service p:after {
+        top: 147%;
+        height: 108%;
+ }
+}
+
 @media (max-width:992px) {
     .navbar{
         text-align: center;
     }
+    .service p:after {
+        height: 126%;
+        top: 156%;
 }
-
+}
 @media (max-width: 768px) {
-
+    .service p:after{
+        display: none;
+    }
         .col-custom{
             margin-bottom: 230px !important;
         }
     
             img.custom{
-                height: 58%;
+                height: 100%;
             
         }
 
@@ -142,5 +234,11 @@ footer{
 @media (max-width: 576px) {
     .media{
         text-align: center;
+    }
+    .map{
+        margin: 0 auto;
+    }
+    img{
+        height: 100%;
     }
 }
