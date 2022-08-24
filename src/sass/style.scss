@@ -94,8 +94,7 @@ h1.header::after{
     display: block;
     height: 90%;
     position: absolute;
-    left: 50%;
-    top: 118%;
+    left: 50%
     }
 
     h1{
@@ -178,7 +177,8 @@ h1.header::after{
  }
 
  form{
-    padding: 100px;
+    padding: 40px;
+    margin-bottom: 20px;
     
     border: 1px outset;
     margin-top: 60px !important;
@@ -199,27 +199,42 @@ footer{
     color: #FFF;
 }
 
-
  @media (max-width:1200px){
     .service p:after {
-        top: 147%;
-        height: 108%;
+        top: 130%;
+        
  }
 }
+
+
 
 @media (max-width:992px) {
     .navbar{
         text-align: center;
     }
     .service p:after {
-        height: 126%;
-        top: 156%;
-}
-}
-@media (max-width: 768px) {
-    .service p:after{
         display: none;
+        
+}
+.service .test {
+    font-size: 21px;
+    margin-bottom: 58px;
+}
+.round{
+    img{
+        width: 100%;
     }
+    .price{
+        span{
+            left: 2% !important;
+        }
+    }
+}
+}
+
+
+@media (max-width: 768px) {
+    
         .col-custom{
             margin-bottom: 230px !important;
         }
@@ -228,9 +243,16 @@ footer{
                 height: 100%;
             
         }
+        .price{
+            span{
+                left: 2% !important;
+            }
+        }
 
     
 }
+
+
 @media (max-width: 576px) {
     .media{
         text-align: center;
