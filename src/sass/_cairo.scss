@@ -1,21 +1,7 @@
-$color-body:#fbfbfb;
-
 $color-head:#a89985;
 $base-color:#6a6b65;
+$custom-color:#cfc1ab;
 
-
-
-@mixin body {
-    background-color: $color-body !important;
-}
-
-.cai{
-    @include body;
-}
-
-h1{
-    color: $color-head;
-}
 
 @mixin p {
     color: $base-color!important;    
@@ -23,8 +9,13 @@ h1{
 @mixin header{
     color: $color-head !important;
 }
+@mixin custom {
+    color: $custom-color !important;
+}
 
-
+h1.custom{
+    @include custom;
+}
 
 .text{
     .custom--description{
@@ -33,6 +24,12 @@ h1{
     .text-header{
         @include header;
     }
+}
+.carousel {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 30px;
 }
 @media (max-width:1400px) {
     .gallary{

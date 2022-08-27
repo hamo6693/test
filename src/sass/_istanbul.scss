@@ -1,7 +1,11 @@
-$color-head:#a89985;
-$base-color:#6a6b65;
+$color-head:#619bc5;
+$base-color:#195DB7;
+$secound-color:#2e5977;
+$primary-color:#6d87ab;
 
-
+@mixin secound {
+    color: $secound-color !important;
+}
 
 @mixin p {
     color: $color-head !important;    
@@ -18,16 +22,20 @@ $base-color:#6a6b65;
         @include header;
     }
 }
+h1.text-head{
+    @include secound ;
+}
 
 
 .text{
     margin-top: 60px;
-    p.description{
+    p.description {
         text-align: center;
         padding: 34px;
         font-size: 24px;
-        color: darkgrey;
+        color: $secound-color;
         font-weight: 500;
+        
     }
     
 }
@@ -35,7 +43,7 @@ $base-color:#6a6b65;
     p.pragraphe{
     font-size: 2rem;
     text-align: center;
-    color: $base-color;
+    color: $primary-color;
     }
     ul{
     list-style: arabic-indic;
