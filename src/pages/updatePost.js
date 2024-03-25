@@ -86,11 +86,11 @@ const UpdatePost = () => {
 
   const onSubmit = async () => {
     const postData = new FormData();
+    postData.append("title", title);
+    postData.append("contents", contents);
 
-    const postForm = {
-      title: title,
-      contents: contents,
-    };
+
+    
     try {
       for (let i = 0; i < photos.length; i++) {
         const response = await fetch(photos[i]);
@@ -100,7 +100,7 @@ const UpdatePost = () => {
       await axios
         .put(
           GET_MY_POSTS + "/" + postId + "/update",
-          { title, contents, img },
+           postData ,
           {
             headers: {
               Authorization: jwt,
