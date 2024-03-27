@@ -52,6 +52,13 @@ const GetAllPosts = () => {
     getPosts();
   }, []);
 
+  function doRefresh() {
+    setTimeout(() => {
+      getPosts();
+    }, 1000);
+  }
+  
+
   const getPosts = async () => {
     setShowLoading(true);
     try {
@@ -64,7 +71,6 @@ const GetAllPosts = () => {
         .then((res) => {
           console.log(res);
           setPosts(res.data);
-          
           setShowLoading(false);
         });
     } catch (e) {
@@ -73,15 +79,11 @@ const GetAllPosts = () => {
     }
   };
 
-  function doRefresh() {
-    setTimeout(() => {
-      getPosts();
-    }, 1000);
-  }
+  
   return (
     <IonPage>
       {showLoading ? (
-        <IonLoading isOpen={showLoading} duration={1000} />
+        <IonLoading isOpen={showLoading} duration={1000} spinner="circles"  message="Loading..." />
       ) : (
         posts && (
           <>
@@ -132,11 +134,7 @@ const GetAllPosts = () => {
                                       <IonText className="post-user">
                                         {post.User.name}
                                       </IonText>
-                                      <IonText
-                                        color="warning"
-                                        className="post-moment"
-                                      >
-                                      </IonText>
+                                      
                                     </IonCol>
                                   </IonRow>
                                   <IonCardTitle

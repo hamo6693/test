@@ -74,7 +74,10 @@ const Register = () => {
       .string()
       .nullable()
       .min(5, "less 5 letter")
-      .required("يجب ادخال كلمة المرور"),
+      .required("يجب ادخال كلمة المرور")
+      .test("match", "كلمة المرور غير مطابقة", function (confPassword) {
+        return confPassword === this.parent.password;
+      }),
   });
 
   return (

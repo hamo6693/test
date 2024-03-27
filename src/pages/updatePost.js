@@ -32,6 +32,7 @@ const UpdatePost = () => {
   const [showToast, setShowToast] = useState(false);
 
   const postId = window.location.pathname.split("/")[2];
+  console.log(postId)
   const [showLoading, setShowLoading] = useState(false);
   const [title, setTitle] = useState();
   const [contents, setContents] = useState();
@@ -78,11 +79,11 @@ const UpdatePost = () => {
   };
 
   useEffect(() => {
-    if (blobUrl) {
-      const imgUrls = [blobUrl, ...photos];
-      setPhotos(imgUrls);
+    if(blobUrl){
+    setImg(blobUrl)
+    onSubmit()
     }
-  }, [blobUrl]);
+},[blobUrl])
 
   const onSubmit = async () => {
     const postData = new FormData();
@@ -92,11 +93,12 @@ const UpdatePost = () => {
 
     
     try {
-      for (let i = 0; i < photos.length; i++) {
-        const response = await fetch(photos[i]);
-        const blob = await response.blob();
+      const response = await fetch(blobUrl)
+      //الحصول على الملف
+      const blob = await response.blob();
+      
         postData.append("postImg", blob);
-      }
+      
       await axios
         .put(
           GET_MY_POSTS + "/" + postId + "/update",
